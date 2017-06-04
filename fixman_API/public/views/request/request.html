@@ -1,0 +1,178 @@
+
+<nav>
+    
+  <header>
+    <span><img src="/images/logo.svg" width="50" /></span>
+    John Doe
+    <a href="/"></a>
+  </header>
+  
+  <ul class="navBackend">
+    <li><span>Navegación</span></li>
+    <li><a class="" href="/backend">Dashboard</a></li>
+    <li><a class="" href="#">Estadísticas</a></li>
+    <li><a class="" href="/category">Categorías</a></li>
+    <li><a class="" href="/person">Usuarios</a></li>
+    <li><a class="active" href="/request">Solicitudes</a></li>
+    <li><a class="" href="/inventory">Contable</a></li>
+    <li><a class="" href="#">Configuración</a></li>
+    <li><a class="" href="/">Salir</a></li>
+  </ul>
+  
+</nav>
+
+<main>
+  <h1>Handyman lista solicitudes</h1>
+  <div class="row">
+    <table class="table table-striped" cellspacing="0" width="100%" id="table_person">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Orden No.</th>
+          <th>Categorías</th>
+          <th>Usuario</th>
+          <th>geo</th>
+          <th>Proveedor</th>
+          <th>Precio</th>
+          <th colspan="2">Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>HM0000021</td>
+          <td>Estructuras Livianas</td>
+          <td>@mdo</td>
+          <td><a href="#" data-toggle="modal" data-target="#map-order" class="btn btn-default"><i class="fa fa-map-marker" aria-hidden="true"></i> 9.938802, -84.202858</a></td>
+          <td>EPA</td>
+          <td>₡11,345.00</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i> </a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>HM0000023</td>
+          <td>Albañilería</td>
+          <td>@fat</td>
+          <td><a href="#" data-toggle="modal" data-target="#map-order" class="btn btn-default"><i class="fa fa-map-marker" aria-hidden="true"></i> 9.938802, -84.202858</a></td>
+          <td>Pipiolo</td>
+          <td>₡33,234.00</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>HM0000045</td>
+          <td>Servicios de Limpieza</td>
+          <td>@twitter</td>
+          <td><a href="#" data-toggle="modal" data-target="#map-order" class="btn btn-default"><i class="fa fa-map-marker" aria-hidden="true"></i> 9.938802, -84.202858</a></td>
+          <td>El Lagar (Santa Ana)</td>
+          <td>₡230,987.00</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</main>
+
+
+<!-- edit user -->
+<div class="modal fade" tabindex="-1" role="dialog" id="edit-person">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Mantenimiento de solicitud</h4>
+      </div>
+      <div class="modal-body row">
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="categorieRequest">Categoría</label>
+            <select name="categoriePerson" class="form-control" id="categorieRequest">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="userRequest">Usuario</label>
+            <input type="email" placeholder="Usuario" id="userRequest" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="box-row">
+            <label>Geo</label>
+            <a href="#" class="btn btn-default"><i aria-hidden="true" class="fa fa-map-marker"></i> 9.938802, -84.202858</a> | <a href="#" class="btn btn-success">Editar <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="providerRequest">Proveedor</label>
+            <select class="form-control" id="providerRequest">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label>Precio</label>
+            <div class="input-group">
+              <span class="input-group-addon">₡</span>
+                <input type="text" aria-label="Amount (to the nearest dollar)" class="form-control">
+                <span class="input-group-addon">.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- delete user -->
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Borrar categorías
+            </div>
+            <div class="modal-body">
+                Seguro de borrar la solicitud?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- map order -->
+<div class="modal fade" id="map-order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.941784220375!2d-84.2050466846625!3d9.938801992893191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTYnMTkuNyJOIDg0wrAxMicxMC4zIlc!5e0!3m2!1sen!2scr!4v1462373004930" width="570" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+

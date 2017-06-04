@@ -1,0 +1,140 @@
+<nav>
+    
+  <header>
+    <span><img src="/images/logo.svg" width="50" /></span>
+    John Doe
+    <a href="/"></a>
+  </header>
+  
+  <ul class="navBackend">
+    <li><span>Navegación</span></li>
+    <li><a class="" href="/backend">Dashboard</a></li>
+    <li><a class="" href="#">Estadísticas</a></li>
+    <li><a class="active" href="/category">Categorías</a></li>
+    <li><a class="" href="/person">Usuarios</a></li>
+    <li><a class="" href="/request">Solicitudes</a></li>
+    <li><a class="" href="/inventory">Contable</a></li>
+    <li><a class="" href="#">Configuración</a></li>
+    <li><a class="" href="/">Salir</a></li>
+  </ul>
+  
+</nav>
+
+<main>
+  
+  <h1>Handyman agregar categorías</h1>
+  
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="nameCat">Nombre de categoría</label>
+        <input type="text" placeholder="Nombre de categoría" id="nameCat" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="descriptionCat">Descripción de categoría</label>
+        <textarea class="form-control" rows="3" id="descriptionCat"></textarea>
+      </div>
+    </div>
+
+    <div class="col-md-offset-11 col-md-1">
+      <div class="box-row">
+        <button class="btn btn-primary" type="submit">Agregar</button>
+      </div>
+    </div>
+
+  </div>
+  <hr />
+  <h1>Handyman lista categorías</h1>
+  <div class="row">
+    <table class="table table-striped" cellspacing="0" width="100%" id="table_person">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Categorías</th>
+          <th>Descripción</th>
+          <th colspan="2">Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Electricidad</td>
+          <td>Herramientas y habilidades básicas para trabajos de electricidad</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i> </a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Fontanería</td>
+          <td>Montaje de todo tipo de instalaciones de fontanería</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Pintura</td>
+          <td>Trabajos de pintura para casa exterior y interior</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</main>
+
+
+<!-- edit user -->
+<div class="modal fade" tabindex="-1" role="dialog" id="edit-person">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Mantenimiento categorías</h4>
+      </div>
+      <div class="modal-body row">
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="nameCat">Nombre de categoría</label>
+            <input type="text" placeholder="Nombre de categoría" id="nameCat" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="descriptionCat">Descripción de categoría</label>
+            <textarea class="form-control" rows="3" id="descriptionCat"></textarea>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- delete user -->
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Borrar categorías
+            </div>
+            <div class="modal-body">
+                Seguro de borrar la categoría?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,250 @@
+<nav>
+    
+  <header>
+    <span><img src="/images/logo.svg" width="50" /></span>
+    John Doe
+    <a href="/"></a>
+  </header>
+  
+  <ul class="navBackend">
+    <li><span>Navegación</span></li>
+    <li><a class="" href="/backend">Dashboard</a></li>
+    <li><a class="" href="#">Estadísticas</a></li>
+    <li><a class="" href="/category">Categorías</a></li>
+    <li><a class="active" href="/person">Usuarios</a></li>
+    <li><a class="" href="/request">Solicitudes</a></li>
+    <li><a class="" href="/inventory">Contable</a></li>
+    <li><a class="" href="#">Configuración</a></li>
+    <li><a class="" href="/">Salir</a></li>
+  </ul>
+  
+</nav>
+
+<main>
+  
+  <h1>Handyman agregar usuario</h1>
+  
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="namePerson">Nombre completo</label>
+        <input type="text" placeholder="Nombre completo" id="namePerson" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="emailPerson">Email</label>
+        <input type="email" placeholder="Email" id="emailPerson" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="idPerson">Cédula (permiso de trabajo)</label>
+        <input type="text" placeholder="Cédula (permiso de trabajo)" id="idPerson" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="picturePerson">Foto</label>
+        <input type="file" id="picturePerson" >
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="categoriePerson">Categoría de servicios</label>
+        <select class="form-control" id="categoriePerson"> 
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label>Rating</label>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="addressPerson">Dirección física</label>
+        <textarea class="form-control" rows="3" id="addressPerson"></textarea>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="legalPerson">Hoja de delincuencia</label>
+        <input type="file" id="legalPerson" >
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box-row">
+        <label for="bankPerson">Datos bancarios</label>
+        <textarea class="form-control" rows="3" id="bankPerson"></textarea>
+      </div>
+    </div>
+
+    <div class="col-md-offset-11 col-md-1">
+      <div class="box-row">
+        <button class="btn btn-primary" type="submit">Agregar</button>
+      </div>
+    </div>
+
+  </div>
+  <hr />
+  <h1>Handyman lista usuarios</h1>
+  <div class="row">
+    <table class="table table-striped" cellspacing="0" width="100%" id="table_person">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Usuario</th>
+          <th colspan="2">Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i> </a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry the Bird</td>
+          <td>&nbsp;</td>
+          <td>@twitter</td>
+          <td><a href="#" data-toggle="modal" data-target="#edit-person" class="btn btn-success">Editar <i aria-hidden="true" class="fa fa-pencil"></i></a></td>
+          <td><a href="#" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">Borrar <i aria-hidden="true" class="fa fa-trash"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</main>
+
+
+<!-- edit user -->
+<div class="modal fade" tabindex="-1" role="dialog" id="edit-person">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Mantenimiento usuarios</h4>
+      </div>
+      <div class="modal-body row">
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="namePerson">Nombre completo</label>
+            <input type="text" placeholder="Nombre completo" id="namePerson" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="emailPerson">Email</label>
+            <input type="email" placeholder="Email" id="emailPerson" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="idPerson">Cédula (permiso de trabajo)</label>
+            <input type="text" placeholder="Cédula (permiso de trabajo)" id="idPerson" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="picturePerson">Foto</label>
+            <input type="file" id="picturePerson" >
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="categoriePerson">Categoría de servicios</label>
+            <select class="form-control" id="categoriePerson"> 
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label>Rating</label>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="addressPerson">Dirección física</label>
+            <textarea class="form-control" rows="3" id="addressPerson"></textarea>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="legalPerson">Hoja de delincuencia</label>
+            <input type="file" id="legalPerson" >
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="box-row">
+            <label for="bankPerson">Datos bancarios</label>
+            <textarea class="form-control" rows="3" id="bankPerson"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- delete user -->
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Borrar usuario
+            </div>
+            <div class="modal-body">
+                Seguro de borrar el usuario?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
