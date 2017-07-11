@@ -1,0 +1,46 @@
+
+picture
+sold:true/false
+//give each product lifetime ->disable the display of the product
+//give a boolean flag for sold or not and disable display
+//track user by the number of times they open the app
+//created at-> lifetime 
+//ranking on users -> frequency // bullers -> reputation(num of people rank you in a good way)
+//services
+//auction *
+// user study *
+Requirements to give the contact because we have to be a reliable thing
+Privacity: (problem) **
+
+{
+  'name':'tati',
+  created_at
+  location,
+  uploaded 
+
+}
+if created_at-Date.now
+  user
+
+
+case{
+  name: "",
+  pictures: [];
+  userId : "",
+  sellerId : ,
+  state : boolean,
+  buyersList : [buyerId1,buyerId2, ... ],
+
+}
+buyer{
+  state : 
+  name :
+  requestList : [case1,case2....],
+}
+user:{
+
+}
+seller{
+  //when i upload a case i became a seller
+
+}
