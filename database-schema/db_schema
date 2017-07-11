@@ -44,3 +44,39 @@ seller{
   //when i upload a case i became a seller
 
 }
+
+
+//some json 
+{
+    "code":0,
+    "msg":null,
+    "data":{
+        "dataList":[
+            {
+                "id":123,
+                "title":"user entered title",
+                category:"user selected category",
+                keywords:"user entered keywords",
+                tags:"user entered tags",
+                marketprice:"user entered price",
+                ourprice:"user updated price",
+                tax:"if we will get there -- user has to pay for service",
+                picurl:'the url to the image',
+                detailinfo:"information about the product",
+                status:"sold or not boolean flag",
+                created_at:"date the upload was made",
+                updated_at:"",
+                createuser:null,
+                updateuser:null,
+                itemcode:"code to track the post",
+                chinesename:'',
+                englishname:'',
+                days_lifetime:"bla blah",
+                qty:"quantity",
+                reccomend:'',
+                rank:'',
+                rate:'',
+            }
+        ]
+    }
+}
